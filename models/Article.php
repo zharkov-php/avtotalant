@@ -48,7 +48,6 @@ class Article extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'description' => 'Description',
             'content' => 'Content',
             'title' => 'Title',
             'date' => 'Date',
@@ -57,6 +56,7 @@ class Article extends \yii\db\ActiveRecord
             'personal_id' => 'Personal ID',
             'status' => 'Status',
             'menu_id' => 'Menu ID',
+            'description' => 'Description',
         ];
     }
 }

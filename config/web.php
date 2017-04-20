@@ -45,7 +45,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-               '<action>'=>'site/<action>',
+             //  '<action>'=>'site/<action>',
+              // 'admin' => '<modules:admin>default/index',
+
                 //'site/about' => '/about',
              //   '<action:\w+>' => 'site/<action>'
                // 'www/web/site/about' => '/about',
@@ -53,7 +55,15 @@ $config = [
         ],
 
     ],
+
+
     'params' => $params,
+
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
