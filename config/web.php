@@ -8,7 +8,7 @@ $config = [
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
-           // 'baseUrl' => '',
+            'baseUrl' => '',
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'DYk31-iXa6aXmK2UgYE7zE-GtLEAbbIK',
 
@@ -45,7 +45,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-              // '<action>'=>'site/<action>',
+               '<action>'=>'site/<action>',
                 //'site/about' => '/about',
              //   '<action:\w+>' => 'site/<action>'
                // 'www/web/site/about' => '/about',
