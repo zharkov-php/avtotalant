@@ -2,21 +2,17 @@
 
 namespace app\modules\admin\controllers;
 
-use app\models\ImageUpload;
-use app\models\Tag;
 use Yii;
-use app\models\Article;
-use app\models\ArticleSearch;
-use yii\helpers\ArrayHelper;
+use app\models\Tag;
+use app\models\TagSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 
 /**
- * ArticleController implements the CRUD actions for Article model.
+ * TagController implements the CRUD actions for Tag model.
  */
-class ArticleController extends Controller
+class TagController extends Controller
 {
     /**
      * @inheritdoc
@@ -34,12 +30,12 @@ class ArticleController extends Controller
     }
 
     /**
-     * Lists all Article models.
+     * Lists all Tag models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ArticleSearch();
+        $searchModel = new TagSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -49,7 +45,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Displays a single Article model.
+     * Displays a single Tag model.
      * @param integer $id
      * @return mixed
      */
@@ -61,13 +57,13 @@ class ArticleController extends Controller
     }
 
     /**
-     * Creates a new Article model.
+     * Creates a new Tag model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Article();
+        $model = new Tag();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -79,7 +75,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Updates an existing Article model.
+     * Updates an existing Tag model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -98,7 +94,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Deletes an existing Article model.
+     * Deletes an existing Tag model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -111,57 +107,18 @@ class ArticleController extends Controller
     }
 
     /**
-     * Finds the Article model based on its primary key value.
+     * Finds the Tag model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Article the loaded model
+     * @return Tag the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Article::findOne($id)) !== null) {
+        if (($model = Tag::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
-
-
-    public function actionSetImage($id)
-    {
-        $model = new ImageUpload;
-
-        if (Yii::$app->request->isPost)
-        {
-            $article = $this->findModel($id);
-            $file = UploadedFile::getInstance($model, 'image');
-
-            if($article->saveImage($model->uploadFile($file, $article->image)))
-            {
-                return $this->redirect(['view', 'id'=>$article->id]);
-            }
-        }
-
-        return $this->render('image', ['model'=>$model]);
-    }
-
-    /////////////////////////////////
-    public function actionSetTags($id)
-    {
-        $article = $this->findModel($id);
-        $selectedTags = $article->getSelectedTags(); //
-        $tags = ArrayHelper::map(Tag::find()->all(), 'id', 'title');
-
-        if(Yii::$app->request->isPost)
-        {
-            $tags = Yii::$app->request->post('tags');
-            $article->saveTags($tags);
-            return $this->redirect(['view', 'id'=>$article->id]);
-        }
-
-        return $this->render('tags', [
-            'selectedTags'=>$selectedTags,
-            'tags'=>$tags
-        ]);
     }
 }
