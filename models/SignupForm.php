@@ -9,12 +9,16 @@ class SignupForm extends Model
     public $name;
     public $email;
     public $password;
-    
+    public $username;
+
+
+
+
     public function rules()
     {
         return [
             [['name','email','password'], 'required'],
-            [['name'], 'string'],
+            [['name', 'username'], 'string'],
             [['email'], 'email'],
             [['email'], 'unique', 'targetClass'=>'app\models\User', 'targetAttribute'=>'email']
         ];

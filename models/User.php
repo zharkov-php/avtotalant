@@ -34,7 +34,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return [
             [['isAdmin'], 'integer'],
-            [['name', 'email', 'password', 'photo'], 'string', 'max' => 255],
+            [['name', 'username', 'email', 'password', 'photo'], 'string', 'max' => 255],
         ];
     }
 
@@ -46,6 +46,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return [
             'id' => 'ID',
             'name' => 'Name',
+            'username' => 'User Name',
             'email' => 'Email',
             'password' => 'Password',
             'isAdmin' => 'Is Admin',
