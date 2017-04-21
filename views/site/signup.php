@@ -27,13 +27,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ]); ?>
 
-                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+
+                <?= $form->field($model, 'email')->textInput() ?>
 
                 <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <?= $form->field($model, 'rememberMe')->checkbox([
-                    'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-                ]) ?>
 
                 <div class="form-group">
                     <div class="col-lg-offset-1 col-lg-11">
@@ -48,21 +46,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     To modify the username/password, please check out the code <code>app\models\User::$users</code>.
                 </div>
             </div>
-        </div>
-
-        <div class="col-md-2">
-            <!-- Put this script tag to the <head> of your page -->
-            <script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>
-
-            <script type="text/javascript">
-                VK.init({apiId: 5862316});
-            </script>
-
-            <!-- Put this div tag to the place, where Auth block will be -->
-            <div id="vk_auth"></div>
-            <script type="text/javascript">
-                VK.Widgets.Auth("vk_auth", {width: "200px", authUrl: '/auth/login-vk'});
-            </script>
         </div>
     </div>
 </div>
