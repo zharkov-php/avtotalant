@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\ScheduleSvyatoshino1;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -60,7 +61,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $svyatoshino = ScheduleSvyatoshino1::find()
+            ->asArray()
+            ->limit(5)
+            -> orderBy(['id' => SORT_DESC])
+            ->all();
+
+        return $this->render('index', compact('svyatoshino'));
     }
 
     /**

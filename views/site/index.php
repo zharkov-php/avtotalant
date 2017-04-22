@@ -75,6 +75,11 @@
             <h6></h6>
 
         </div>
+
+
+
+
+
         <div class="col-md-4  col-sm-3 service-grid1">
             <h4>М. Святошин</h4>
             <p>М.Нивки, м.Святошин.
@@ -84,6 +89,8 @@
                 Тел.093-600- 10-10, 098-484- 04-04, 050-086- 44-41,</p>
             <a href="#" data-toggle="modal" data-target="#myModal">Расписание</a>
         </div>
+
+
 
 
         <div class="col-md-4  col-sm-3 service-grid2">
@@ -125,7 +132,7 @@
 
 
 
-                        <div class="panel panel-default">
+                        <div class="panel panel-default" >
                             <!-- Default panel contents -->
                             <div class="panel-heading">Расписание  групп на м.Святошин :</div>
 
@@ -133,38 +140,24 @@
                             <!-- Table -->
                             <table class="table table-striped">
 
-                                <tr class="success">
-                                    <td>#</td>
-                                    <td>25.04.2017</td>
-                                    <td>18.30 - 20.00</td>
-                                    <td>понедельник, среда, пятница</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
-                                </tr>
-                                <tr class="error">
-                                    <td>#</td>
-                                    <td>TB - Monthly</td>
-                                    <td>01/04/2012</td>
-                                    <td>error</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
 
-                                </tr>
-                                <tr class="warning">
-                                    <td>#</td>
-                                    <td>TB - Monthly</td>
-                                    <td>01/04/2012</td>
-                                    <td>warning</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
+                                <?php foreach($svyatoshino as $svyatoshin): ?>
+                                <tr class="<?php echo $svyatoshin['status_color_Lesson'] ; ?>">
 
+                                    <td><?php echo $svyatoshin['name_Lesson'] ; ?></td>
+                                    <td><?php echo $svyatoshin['time_Lesson'] ; ?></td>
+                                    <td><?php echo $svyatoshin['date_Lesson'] ; ?></td>
+                                    <td><font color="red"><?php echo $svyatoshin['sale_Lesson'] ; ?></font></td>
                                 </tr>
-                                <tr class="info">
-                                    <td>#</td>
-                                    <td>TB - Monthly</td>
-                                    <td>01/04/2012</td>
-                                    <td>info</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
 
-                                </tr>
+                                <?php endforeach; ?>
+
+<!--
+<!---->
+
                             </table>
+                            <h2><font color="#f08080">Красное поле  - группа уже села</font></h2>
+                            <h2><font color="#8fbc8f">Зеленое поле  - набирается группа</font></h2>
 
                         </div>
 

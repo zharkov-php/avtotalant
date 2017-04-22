@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Schedule */
+/* @var $model app\models\ScheduleSvyatoshino1 */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Schedules', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Schedule Svyatoshino1s', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="schedule-view">
+<div class="schedule-svyatoshino1-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,13 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'nameDate',
-            'timeDate',
-            'weekDate',
-            'lengthDate',
-            'status',
-            'on',
-            'filial_id',
+            'name_Lesson',
+            'time_Lesson',
+            'date_Lesson',
+            'sale_Lesson',
+            'google_map_Lesson',
+            'status_color_Lesson',
+            'active_Lesson',
         ],
     ]) ?>
 

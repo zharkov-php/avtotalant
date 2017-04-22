@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\ScheduleSearch */
+/* @var $searchModel app\models\ScheduleSvyatoshino1Search */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Расписание групп';
+$this->title = 'Расписание групп на Святошин - Нивки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="schedule-index">
+<div class="schedule-svyatoshino1-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -25,13 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'nameDate',
-            'timeDate',
-            'weekDate',
-            'lengthDate',
-            // 'status',
-            // 'on',
-            // 'filial_id',
+            'name_Lesson',
+            'time_Lesson',
+            'date_Lesson',
+            'sale_Lesson',
+            // 'google_map_Lesson',
+             'status_color_Lesson',
+             'active_Lesson',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -26,6 +26,7 @@ AdminAppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+
     <?php
     NavBar::begin([
         'brandLabel' => 'Вернуться на сайт',
@@ -34,13 +35,14 @@ AdminAppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Главная Админки', 'url' => ['default/index']],
             ['label' => 'Статьи', 'url' => ['article/index']],
             ['label' => 'Теги', 'url' => ['tag/index']],
-            ['label' => 'Расписание', 'url' => ['schedule/index']],
+            ['label' => 'Святошин', 'url' => ['schedule-svyatoshino-1/index']],
             ['label' => 'Прайс', 'url' => ['price/index']],
             ['label' => 'Контакты', 'url' => ['contact/index']],
            //['label' => 'Стоимость', 'url' => ['price/index']],
