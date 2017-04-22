@@ -27,11 +27,7 @@ AppAsset::register($this);
 
 
 
-    <!-- Web-Fonts -->
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    <!-- //Web-Fonts -->
+
     <?php $this->head() ?>
 </head>
 <body>
@@ -93,7 +89,7 @@ AppAsset::register($this);
 
 <div class="footer">
     <div class="container">
-        <p class="agileinfo"> &copy; 2016. All Rights Reserved | Design by <a href="">Zharkov@Co</a></p>
+        <p class="agileinfo"> &copy; <?=Html::a('2010', '/auth/login') ; ?>. All Rights Reserved | Design by <a href="">Zharkov@Co</a></p>
     </div>
 </div>
 
@@ -112,7 +108,7 @@ AppAsset::register($this);
 </script>
 <!-- //Navigation-JavaScript -->
 <!--script for portfolio-->
-<script src="/js/lightbox-plus-jquery.min.js"> </script>
+
 <script src="/js/easyResponsiveTabs.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function () {
