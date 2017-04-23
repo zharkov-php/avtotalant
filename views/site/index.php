@@ -113,11 +113,12 @@
         </div>
 
 
-
-
-
         <div class="clearfix"></div>
 
+
+
+
+        <!--Расписание Святошино -->
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
@@ -128,12 +129,9 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-
-
-
-
                         <div class="panel panel-default" >
                             <!-- Default panel contents -->
+
                             <div class="panel-heading">Расписание  групп на м.Святошин :</div>
 
 
@@ -169,6 +167,13 @@
                 </div>
             </div>
         </div>
+        <!--Конец расписания Святошино -->
+
+
+
+
+
+        <!--Расписание Левобережка -->
         <div id="myModal1" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -185,39 +190,24 @@
                             <!-- Table -->
                             <table class="table table-striped">
 
-                                <tr class="success">
-                                    <td>#</td>
-                                    <td>25.04.2017</td>
-                                    <td>18.30 - 20.00</td>
-                                    <td>понедельник, среда, пятница</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
-                                </tr>
-                                <tr class="error">
-                                    <td>#</td>
-                                    <td>TB - Monthly</td>
-                                    <td>01/04/2012</td>
-                                    <td>error</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
 
-                                </tr>
-                                <tr class="warning">
-                                    <td>#</td>
-                                    <td>TB - Monthly</td>
-                                    <td>01/04/2012</td>
-                                    <td>warning</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
+                                <?php foreach($levoberezhnaya as $levoberezhka): ?>
+                                    <tr class="<?php echo $levoberezhka['status_color_Lesson'] ; ?>">
 
-                                </tr>
-                                <tr class="info">
-                                    <td>#</td>
-                                    <td>TB - Monthly</td>
-                                    <td>01/04/2012</td>
-                                    <td>info</td>
-                                    <td>Приведи друга - получи скидку 50%</td>
+                                        <td><?php echo $levoberezhka['name_Lesson'] ; ?></td>
+                                        <td><?php echo $levoberezhka['time_Lesson'] ; ?></td>
+                                        <td><?php echo $levoberezhka['date_Lesson'] ; ?></td>
+                                        <td><font color="red"><?php echo $levoberezhka['sale_Lesson'] ; ?></font></td>
+                                    </tr>
 
-                                </tr>
+                                <?php endforeach; ?>
+
+                                <!--
+                                <!---->
+
                             </table>
-
+                            <h2><font color="#f08080">Красное поле  - группа уже села</font></h2>
+                            <h2><font color="#8fbc8f">Зеленое поле  - набирается группа</font></h2>
                         </div>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4272.72701725397!2d30.597023864123166!3d50.44894785769835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cff19dd9fd39%3A0x5f3eaa983bbd19ca!2z0J7QntCeICLQmtCy0LDRgNGCLdCQIg!5e0!3m2!1suk!2sua!4v1484991128761" width="200" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
                         <p>Расписание автошколы м. Левобережная </p>
@@ -225,6 +215,13 @@
                 </div>
             </div>
         </div>
+        <!--Конец расписания Левобережка -->
+
+
+
+
+
+        <!--Расписание Лукьяновка -->
         <div id="myModal2" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -281,7 +278,7 @@
                 </div>
             </div>
         </div>
-
+        <!--Конец расписания Лукьяновка -->
 
 
 

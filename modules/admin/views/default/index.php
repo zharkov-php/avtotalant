@@ -1,12 +1,32 @@
+<?php
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+?>
+
 <div class="admin-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
-    <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
-    </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+    <div class="page-header">
+        <h1><center>ПАНЕЛЬ АДМИНИСТРАТОРА:</center> </h1>
+    </div>
+
+    <ul class="thumbnails">
+
+        <li class="span4">Автошкола на м.Святошин / м.Нивки
+            <?= Html::a(Html::img('http://placehold.it/300x200') , Url::to(['schedule-svyatoshino-1/index']), ['class' => 'thumbnail'])?>
+
+
+
+        </li>
+        <li class="span4">Автошкола на м.Левобережная
+            <?= Html::a(Html::img('http://placehold.it/300x200') , Url::to(['schedule-levoberezhnaya-1/index']), ['class' => 'thumbnail'])?>
+
+        </li>
+
+        <li class="span4">
+            <a href="#" class="thumbnail">
+                <img src="http://placehold.it/300x200" alt="">
+            </a>
+        </li>
+    </ul>
+
 </div>
