@@ -22,10 +22,9 @@ use yii\helpers\Url;
 
         </li>
 
-        <li class="span4">
-            <a href="#" class="thumbnail">
-                <img src="http://placehold.it/300x200" alt="">
-            </a>
+        <li class="span4">Автошкола на м.Лукьяновка
+            <?= Html::a(Html::img('http://placehold.it/300x200') , Url::to(['schedule-lukianovka-1/index']), ['class' => 'thumbnail'])?>
+
         </li>
     </ul>
 

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\ScheduleLukianovka1;
 use app\models\ScheduleSvyatoshino1;
 use app\models\ScheduleLevoberezhnaya1;
 use Yii;
@@ -74,7 +75,13 @@ class SiteController extends Controller
         -> orderBy(['id' => SORT_DESC])
         ->all();
 
-        return $this->render('index', compact('svyatoshino', 'levoberezhnaya'));
+        $lukianovka = ScheduleLukianovka1::find()
+            ->asArray()
+            ->limit(5)
+            -> orderBy(['id' => SORT_DESC])
+            ->all();
+
+        return $this->render('index', compact('svyatoshino', 'levoberezhnaya', 'lukianovka'));
     }
 
     /**

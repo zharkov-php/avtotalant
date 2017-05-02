@@ -44,6 +44,7 @@ AdminAppAsset::register($this);
            // ['label' => 'Теги', 'url' => ['tag/index']],
             ['label' => 'Святошин', 'url' => ['schedule-svyatoshino-1/index']],
             ['label' => 'Левобережная', 'url' => ['schedule-levoberezhnaya-1/index']],
+            ['label' => 'Лукяновка', 'url' => ['schedule-lukianovka-1/index']],
            // ['label' => 'Прайс', 'url' => ['price/index']],
            // ['label' => 'Контакты', 'url' => ['contact/index']],
            //['label' => 'Стоимость', 'url' => ['price/index']],
