@@ -520,64 +520,7 @@
 
 
 
-<div class="team" id="team">
-    <div class="container">
-        <div class="team-header">
-            <h3>Преподователи</h3>
-            <h5>Все наши преподаватели</h5>
-            <label class="portfolio-line"></label>
-            <h6>Наша команда, подобрана из лучших специалистов страны...</h6>
 
-        </div>
-        <div class="col-md-3 col-sm-3 team-grid team-grid1 animated wow slideInUp" data-wow-delay=".5s">
-            <img src="/images/prikol/33331.jpg" alt=" " class="img-responsive" />
-            <div class="p-mask">
-                <h4>Eva Green</h4>
-                <ul>
-                    <li><a class="twitter" href="#"></a></li>
-                    <li><a class="facebook" href="#"></a></li>
-                    <li><a class="pinterest" href="#"></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-3 team-grid team-grid2 animated wow slideInUp" data-wow-delay=".5s">
-            <img src="/images/prikol/3332.jpg" alt=" " class="img-responsive" />
-            <div class="p-mask">
-                <h4>Kristen Stewart</h4>
-                <ul>
-                    <li><a class="twitter" href="#"></a></li>
-                    <li><a class="facebook" href="#"></a></li>
-                    <li><a class="pinterest" href="#"></a></li>
-                </ul>
-
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-3 team-grid team-grid3 animated wow slideInUp" data-wow-delay=".5s">
-            <img src="/images/prikol/3333.jpg" alt=" " class="img-responsive" />
-            <div class="p-mask">
-                <h4>Daniel Jill</h4>
-                <ul>
-                    <li><a class="twitter" href="#"></a></li>
-                    <li><a class="facebook" href="#"></a></li>
-                    <li><a class="pinterest" href="#"></a></li>
-                </ul>
-
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-3 team-grid team-grid4 animated wow slideInUp" data-wow-delay=".5s">
-            <img src="/images/prikol/3334.jpg" alt=" " class="img-responsive" />
-            <div class="p-mask agileinfo">
-                <h4>John Miller</h4>
-                <ul>
-                    <li><a class="twitter" href="#"></a></li>
-                    <li><a class="facebook" href="#"></a></li>
-                    <li><a class="pinterest" href="#"></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
 
 <div class="contact" id="contact">
     <div class="container">

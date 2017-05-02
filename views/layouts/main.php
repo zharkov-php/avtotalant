@@ -55,7 +55,6 @@ AppAsset::register($this);
                             <li class="list-item"><a class="scroll" href="#banner"><img  src="/fonts/user.png"></a></li>
                             <li class="list-item"><a class="scroll" href="#services"><img  src="/fonts/frostwire.png"></a></li>
                             <li class="list-item"><a class="scroll" href="#price"><img  src="/fonts/scilab.png"></a></li>
-                            <li class="list-item"><a class="scroll" href="#team"><img  src="/fonts/configusers.png"></a></li>
                             <li class="list-item"><a class="scroll" href="#portfolio"><img  src="/fonts/gphoto.png"></a></li>
 
                             <li class="list-item"><a class="scroll" href="#contact"><img  src="/fonts/ekiga.png"></a></li>
@@ -89,7 +88,7 @@ AppAsset::register($this);
 
 <div class="footer">
     <div class="container">
-        <p class="agileinfo"> &copy; <?=Html::a('2010', '/auth/login') ; ?>. All Rights Reserved | Design by <a href="">Zharkov@Co</a></p>
+        <p class="agileinfo"> &copy; <?=Html::a('2017', '/auth/login') ; ?>. All Rights Reserved | Design by <a href="">Zharkov@Co</a></p>
     </div>
 </div>
 
